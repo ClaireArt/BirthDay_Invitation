@@ -1,0 +1,54 @@
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.timer>h1 {
+    color: white;
+    text-align: center;
+}
+
+.timer_content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.timer_content>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.timer_content>div>span:first-child {
+    font-size: 32px;
+    font-family: 'poppins-font';
+}
+
+.timer_content>div>span:last-child {
+    font-size: 15px;
+}
+
+/* --------------------------------------response---------------------------------------------------------- */
+@media screen and (max-width:1024px) {
+    .timer>h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .timer>h1 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .timer>h1 {
+        font-size: 12px;
+    }
+}

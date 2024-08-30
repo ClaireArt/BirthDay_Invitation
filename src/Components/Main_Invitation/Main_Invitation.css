@@ -1,0 +1,284 @@
+.main_invitation {
+    width: 100%;
+    background-color: #F9F9F8;
+    padding: 100px 0;
+    height: 900px;
+}
+
+
+.main_invitation_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.invintation_text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+}
+
+.invintation_text>p {
+    font-size: 24px;
+    text-align: center;
+}
+
+.invintation_text>h1 {
+    font-size: 44px;
+    color: var(--cream-color);
+    font-family: 'global-font';
+    letter-spacing: 2px;
+    position: absolute;
+    top: -30%;
+    left: 15%;
+}
+
+.invitation_box {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 30px;
+}
+
+/* -------------------------------------images---------------------------------- */
+.invitation_image {
+    position: relative;
+}
+
+.invitation_image_1 {
+    max-width: 350px;
+    height: 380px;
+    border-radius: 60px 0 0 0;
+    animation: invitation_image_1 1.5s ease-in-out;
+}
+
+@keyframes invitation_image_1 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.invitation_image_2 {
+    max-width: 230px;
+    height: 205px;
+    border-radius: 60px 60px 0 0;
+    z-index: 9999;
+    position: absolute;
+    top: 55%;
+    right: -5%;
+    animation: invitation_image_2 1.5s ease-in-out;
+}
+
+@keyframes invitation_image_2 {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.invitation_image_3 {
+    max-width: 250px;
+    height: 290px;
+    border-radius: 0 60px 0 0;
+    position: absolute;
+    top: 35%;
+    right: -50%;
+    animation: invitation_image_3 1.5s ease-in-out;
+}
+
+@keyframes invitation_image_3 {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.invitation_image_1>img {
+    border-radius: 60px 0 0 0;
+}
+
+.invitation_image_2>img {
+    border-radius: 60px 60px 0 0;
+}
+
+.invitation_image_3>img {
+    border-radius: 0 60px 0 0;
+}
+
+/* ----------------------------------------------------------------------------- */
+.invitation_blank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: invitation_blank 1.5s ease-in-out;
+}
+
+@keyframes invitation_blank {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.invitation_blank>h1 {
+    font-size: 44px;
+    color: var(--cream-color);
+    font-family: 'global-font';
+    letter-spacing: 1px;
+}
+
+.invitation_blank>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.invitation_blank>div>span {
+    font-size: 24px;
+}
+
+.invitation_blank>div>span:last-child {
+    color: var(--cream-color);
+}
+
+.adress_text {
+    max-width: 350px;
+    text-align: center;
+}
+
+.autor_text {
+    max-width: 200px;
+    text-align: center;
+}
+
+/* --------------------------------------response---------------------------------------------------------- */
+@media screen and (max-width:1140px) {
+    .main_invitation {
+        height: 1300px;
+    }
+
+    .invitation_box {
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .invitation_image_1 {
+        max-width: 280px;
+        height: 310px;
+    }
+
+    .invitation_image_2 {
+        max-width: 160px;
+        height: 145px;
+        top: 70%;
+        right: -2%;
+    }
+
+    .invitation_image_3 {
+        max-width: 180px;
+        height: 210px;
+        top: 45%;
+        right: -30%;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .invintation_text>h1 {
+        position: static;
+        text-align: center;
+    }
+
+    .invintation_text>p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .invintation_text>p {
+        font-size: 16px;
+    }
+
+    .invitation_blank>h1 {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .invintation_text>h1 {
+        font-size: 24px;
+    }
+
+    .invintation_text>p {
+        font-size: 16px;
+    }
+
+    .invitation_blank>h1 {
+        font-size: 24px;
+    }
+
+    .invitation_image_1 {
+        max-width: 200px;
+        height: 220px;
+    }
+
+    .invitation_image_2 {
+        max-width: 105px;
+        height: 95px;
+        top: 75%;
+        right: -2%;
+    }
+
+    .invitation_image_3 {
+        max-width: 122px;
+        height: 118px;
+        top: 45%;
+        right: -30%;
+    }
+
+    .main_invitation {
+        height: 1200px;
+        padding: 70px 0;
+    }
+
+    .invitation_image_1>img {
+        border-radius: 30px 0 0 0;
+    }
+
+    .invitation_image_2>img {
+        border-radius: 30px 30px 0 0;
+    }
+
+    .invitation_image_3>img {
+        border-radius: 0 30px 0 0;
+    }
+}

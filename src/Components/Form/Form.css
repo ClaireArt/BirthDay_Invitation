@@ -1,0 +1,174 @@
+.register {
+    background-color: white;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 30px;
+}
+
+.full_name_div>span {
+    font-size: 16px;
+}
+
+.name_inp>input,
+.guest_inp>input {
+    width: 370px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+.name_inp>input:focus,
+.guest_inp>input:focus,
+.full_name_div>textarea:focus {
+    outline: none;
+}
+
+.register_btn {
+    width: 240px;
+    height: 40px;
+    font-size: 16px;
+    background-color: transparent;
+    color: var(--cream-color);
+    border: 1px solid var(--cream-color);
+}
+
+.register_btn:hover {
+    background-color: var(--cream-color);
+    color: white;
+    transition: background-color 800ms linear;
+}
+
+.full_name_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.full_name_div>textarea {
+    width: 370px;
+    height: 60px;
+    border: none;
+    border-bottom: 1px solid #AAAAAA;
+    resize: none;
+    font-size: 16px;
+}
+
+.full_name_div>textarea::placeholder {
+    color: black;
+}
+
+.error {
+    margin: 5px 0;
+    color:red;
+}
+
+/* --------------------------------------radio-------------------------------------- */
+.radio_inp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.radio-input {
+    visibility: hidden;
+}
+
+.radio-label {
+    position: relative;
+    padding-left: 35px;
+}
+
+.radio-label {
+    font-size: 16px;
+}
+
+.radio-label:after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    border-radius: 50%;
+}
+
+.radio-border {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    outline: solid 1px #AAAAAA;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.radio-input:checked+.radio-label:after {
+    transition: all 0.5s;
+    background-color: #AAAAAA;
+}
+
+.radio_inp>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+
+/* --------------------------------------response---------------------------------------------------------- */
+@media screen and (min-width:481px) and (max-width:768px) {
+    .register {
+        width: 100%;
+    }
+
+    .radio_inp>span {
+        font-size: 12px;
+    }
+
+    .radio-label {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .register {
+        width: 100%;
+    }
+
+    .full_name_div>textarea {
+        width: 320px;
+        font-size: 16px;
+    }
+
+    .name_inp>input,
+    .guest_inp>input {
+        width: 320px;
+        font-size: 16px;
+    }
+
+    .radio_inp>span {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .full_name_div>span {
+        font-size: 16px;
+    }
+
+    .radio-label {
+        font-size: 14px;
+    }
+}
+
+.success{
+    color: green;
+}

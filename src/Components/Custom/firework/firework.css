@@ -1,0 +1,87 @@
+.Firework-bigPar {
+   display: flex;
+   justify-content: center;
+   padding: 0 20px;
+}
+.Firework-bigPar-child {
+   display: flex;
+   justify-content: space-between;
+   flex-basis: 900px;
+}
+
+.firework-par1,
+.firework-par2 {
+   position: relative;
+   background-color: #c6900a;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   display: block;
+}
+
+@keyframes firework {
+   0% {
+      transform: translate(2%, 20vh);
+      width: 0.5vmin;
+      opacity: 1;
+   }
+   50% {
+      width: 0.5vmin;
+      opacity: 1;
+   }
+   100% {
+      width: 30vmin;
+      opacity: 0;
+   }
+}
+
+.firework {
+   top: -130px !important;
+}
+.firework,
+.firework::before,
+.firework::after {
+   /* --top: 60vh; */
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 0.5vmin;
+   aspect-ratio: 1;
+   background:
+     /* random backgrounds */ radial-gradient(circle, #c6900a 0.2vmin, #0000 0) 50%
+         00%,
+      radial-gradient(circle, #c6900a 0.3vmin, #0000 0) 00% 50%,
+      radial-gradient(circle, #c6900a 0.5vmin, #0000 0) 50% 99%,
+      radial-gradient(circle, #c6900a 0.2vmin, #0000 0) 99% 50%,
+      radial-gradient(circle, #c6900a 0.3vmin, #0000 0) 80% 90%,
+      radial-gradient(circle, #c6900a 0.5vmin, #0000 0) 95% 90%,
+      radial-gradient(circle, #c6900a 0.5vmin, #0000 0) 10% 60%,
+      radial-gradient(circle, #c6900a 0.2vmin, #0000 0) 31% 80%,
+      radial-gradient(circle, #c6900a 0.3vmin, #0000 0) 80% 10%,
+      radial-gradient(circle, #c6900a 0.2vmin, #0000 0) 90% 23%,
+      radial-gradient(circle, #c6900a 0.3vmin, #0000 0) 45% 20%,
+      radial-gradient(circle, #c6900a 0.5vmin, #0000 0) 13% 24%;
+   background-size: 0.5vmin 0.5vmin;
+   background-repeat: no-repeat;
+   animation: firework 2s infinite;
+}
+
+.firework-par2 > .firework,
+/* .firework::before, */
+.firework::after {
+   animation: firework 2.5s infinite !important;
+}
+.firework-par1 > .firework,
+.firework::before {
+   animation: firework 2.8s infinite !important;
+}
+
+.firework::before {
+   transform: translate(-50%, -50%) rotate(25deg) !important;
+}
+
+.firework::after {
+   transform: translate(-50%, -50%) rotate(-37deg) !important;
+}

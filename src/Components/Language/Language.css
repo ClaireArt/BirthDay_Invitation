@@ -1,0 +1,102 @@
+.menu_language {
+    position: relative;
+    width: 0px;
+    top: 90px;
+    left: 60px;
+    font-family: 'global-font';
+    letter-spacing: 1.5px;
+}
+
+.toggle {
+    display: none;
+}
+
+.style {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 5;
+    display: block;
+    margin-bottom: 0;
+    background-color: transparent;
+    color: #fff;
+    font-size: 22px;
+    padding-top: 5px;
+    text-align: center;
+    transition: all .8s;
+}
+
+.tab p {
+    max-width: 85px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 15px;
+    padding-top: 20px;
+    font-weight: 700;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.toggle:checked+.style {
+    transform: translate(-50%, -50%) scale(.5);
+}
+
+.tab {
+    position: absolute;
+    color: #fff;
+    width: 80px;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    opacity: 0;
+    border-radius: 50%;
+}
+
+.toggle:checked~.tab {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.menu_language>.toggle:checked~.tab:nth-of-type(1) {
+    top: -60px;
+    left: 0px;
+    transition-delay: 0s;
+}
+
+.menu_language>.toggle:checked~.tab:nth-of-type(2) {
+    top: -25px;
+    left: 80px;
+    transition-delay: 0.125s;
+}
+
+.menu_language>.toggle:checked~.tab:nth-of-type(3) {
+    top: 55px;
+    left: 60px;
+    transition-delay: 0.25s;
+}
+
+.fa {
+    font-size: 18px;
+}
+
+/* --------------------------------------response-------------------------------- */
+@media screen and (max-width:1200px) {
+    .menu_language {
+        margin: 0 0 80px 0;
+    }
+
+    .tab {
+        width: 60px;
+        height: 50px;
+    }
+
+    .tab p {
+        font-size: 20px;
+        padding-top: 20px;
+    }
+}

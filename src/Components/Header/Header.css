@@ -1,0 +1,199 @@
+.header {
+   width: 100%;
+   height: 900px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 10px;
+}
+
+.header_content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 40px;
+   padding: 50px 0;
+}
+
+.birthday_box {
+   width: 700px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border: 2px solid;
+   border-image: linear-gradient(to left, rgba(246, 197, 147, 1), rgba(255, 129, 3, 1));
+   border-image-slice: 1;
+   background-color: #0b1a39a1;
+   padding: 30px;
+   gap: 10px;
+   position: relative;
+   animation: birthday_box 1.5s ease-in-out;
+   text-transform: uppercase;
+}
+@keyframes birthday_box {
+   0% {
+      opacity: 0;
+      transform: translateY(-50%);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.balloons {
+   position: absolute;
+   max-width: 540px;
+   bottom: -20%;
+   right: -48%;
+   animation: balloons 1.5s ease-in-out;
+}
+@keyframes balloons {
+   0% {
+      opacity: 0;
+      transform: translateY(100%);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.birthday_box > h1 {
+   color: white;
+   font-size: 90px;
+   text-align: center;
+   letter-spacing: 5px;
+}
+
+.birthday_box > h2 {
+   color: var(--cream-color);
+   font-size: 50px;
+   transform: translateX(58%);
+   font-family: 'global-font';
+   z-index: 9999;
+}
+
+.birthday_box > span {
+   font-size: 32px;
+   color: white;
+   font-weight: 400;
+}
+
+.age {
+   display: flex;
+   justify-content: center;
+}
+
+.age > img {
+   width: 200px;
+}
+
+/* --------------------------------------response---------------------------------------------------------- */
+@media screen and (max-width: 1440px) {
+   .balloons {
+      max-width: 350px;
+      bottom: -10%;
+      right: -20%;
+   }
+
+   .header {
+      height: 900px;
+   }
+}
+
+@media screen and (max-width: 1024px) {
+   .birthday_box {
+      width: 500px;
+   }
+
+   .balloons {
+      max-width: 300px;
+      bottom: -10%;
+      right: -20%;
+   }
+
+   .age > img {
+      width: 150px;
+   }
+
+   .birthday_box > h1 {
+      font-size: 60px;
+      max-width: 400px;
+   }
+
+   .birthday_box > h2 {
+      font-size: 35px;
+   }
+
+   .header {
+      height: 800px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .birthday_box {
+      width: 350px;
+   }
+
+   .balloons {
+      max-width: 200px;
+      bottom: -10%;
+      right: -15%;
+   }
+
+   .age > img {
+      width: 100px;
+   }
+
+   .birthday_box > h1 {
+      font-size: 40px;
+      max-width: 300px;
+   }
+
+   .birthday_box > h2 {
+      font-size: 25px;
+   }
+
+   .header {
+      height: 700px;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .birthday_box {
+      width: 300px;
+   }
+
+   .balloons {
+      max-width: 150px;
+      bottom: 0;
+      right: -5%;
+   }
+
+   .age > img {
+      width: 70px;
+   }
+
+   .birthday_box > h2 {
+      font-size: 20px;
+   }
+
+   .birthday_box > h1 {
+      font-size: 30px;
+      max-width: 300px;
+   }
+
+   .header {
+      height: 600px;
+   }
+
+   .birthday_box {
+      padding: 10px 0;
+   }
+
+   .birthday_box > span {
+      z-index: 9999;
+   }
+}
